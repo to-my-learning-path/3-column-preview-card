@@ -1,0 +1,28 @@
+$mobile-size: 375px;
+$desktop-size: 1440px;
+
+$dark-cyan: hsl(184, 100%, 22%);
+$bright-orange: hsl(31, 77%, 52%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+$bg-clr-list: $bright-orange, $dark-cyan, $very-dark-cyan;
+
+//paragraphs
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+
+//background, headings, buttons
+$very-light-gray: hsl(0, 0%, 95%);
+
+$font-size: 15px;
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$font-family-primary: "Big Shoulders Display", cursive;
+$font-family-secondary: "Lexend Deca", sans-serif;
+
+@mixin flex($direction: row, $justify-content: center) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+}

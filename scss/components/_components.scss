@@ -1,0 +1,19 @@
+@use "../abstracts/abstracts" as variable;
+
+button {
+  background-color: white;
+  font-family: variable.$font-family-secondary;
+  font-weight: 700;
+  height: 2.5rem;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+    color: white !important;
+    border: 1px solid white;
+  }
+}

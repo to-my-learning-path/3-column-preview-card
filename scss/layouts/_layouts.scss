@@ -1,0 +1,55 @@
+@use "../abstracts/abstracts" as variable;
+
+main {
+  @include variable.flex();
+
+  $width: 74%;
+  max-width: $width;
+}
+
+$bg-clr-list: variable.$bg-clr-list;
+
+@for $i from 1 through length($bg-clr-list) {
+  $current-bg-clr: nth($bg-clr-list, $i);
+  .card:nth-child(#{$i}) {
+    background-color: $current-bg-clr;
+  }
+}
+
+.card {
+  padding: 2.5rem;
+  max-width: 18.125rem;
+  height: 27rem;
+
+  > * {
+    margin: 1rem auto;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    color: white;
+  }
+
+  p {
+    font-family: variable.$font-family-secondary;
+  }
+}
+
+@for $i from 1 through length($bg-clr-list) {
+  $current-bg-clr: nth($bg-clr-list, $i);
+  .card:nth-child(#{$i}) > button {
+    color: $current-bg-clr;
+  }
+}
+
+@media (max-width: 1122px) {
+  .card {
+    min-height: 27rem;
+  }
+}
+
+@media (max-width: 905px) {
+  main {
+    @include variable.flex(column);
+  }
+}
